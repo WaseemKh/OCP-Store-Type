@@ -2,27 +2,38 @@
 Console.WriteLine("Hello, World!");
 
 
-public class Store
+public abstract class Store
 {
     public int StoreId { get; set; }
     public string StoreName { get; set; }
     public string Type { get; set; }
 
 
-    public void _doSomthing(Store obj)
+    public abstract   void DoSomthing(Store obj);
+   
+}
+
+
+public class OnlineStore : Store
+{
+    public override void DoSomthing(Store obj)
     {
+        throw new NotImplementedException();
+    }
+}
 
-        if(obj.Type  == "hypothetical")
-        {
+public class RealityStore : Store
+{
+    public override void DoSomthing(Store obj)
+    {
+        throw new NotImplementedException();
+    }
+}
 
-        //do by EF Operation 
-        }else if(obj.Type == "Physical")
-        {
-            //do by EF Operation 
-        }
-        else if(obj.Type == "unscheduled")
-        {
-            //do by EF Operation 
-        }
+public class DeafoultStore : Store
+{
+    public override void DoSomthing(Store obj)
+    {
+        throw new NotImplementedException();
     }
 }
