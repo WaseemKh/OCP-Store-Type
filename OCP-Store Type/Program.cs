@@ -22,7 +22,7 @@ public class Store
         }
         else if(obj.Type == "unscheduled")
         {
-
+            //do by EF Operation 
         }
     }
 }
